@@ -6,8 +6,8 @@
  */
 include './conexao.php';
 
-echo $login = $_POST['login'];
-echo $senha = $_POST['senha'];
+$login = $_POST['login'];
+$senha = $_POST['senha'];
 
 
 $consulta = "select * from usuarios where loginUsuario='$login' and senhaUsuario='$senha'";

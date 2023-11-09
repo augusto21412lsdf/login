@@ -12,6 +12,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <title></title>
     </head>
     <body>
+        <p><a href="sair">sair</a></p>
+
+        <p>seja bem vindo
+
+            <?php
+            $consulta = "select nomeUsuario from usuarios where loginUsuario='$login' and senhaUsuario='$senha'";
+            $consulta = mysqli_query($con, $consulta);
+            while ($row = mysqli_fetch_array($consulta)) {
+                echo $row['nomeUsuario'];
+            }
+            ?>
+        </p>
         primeira página do projeto.
     </body>
 </html>
